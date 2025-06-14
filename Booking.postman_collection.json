@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "2041ff52-1568-455a-b6b7-037522b3df90",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39794215",
+		"_collection_link": "https://grey-moon-8257-1.postman.co/workspace/Menhba~04478acb-7feb-42d2-b874-9fbfd2704575/collection/39794215-2041ff52-1568-455a-b6b7-037522b3df90?action=share&source=collection_link&creator=39794215"
+	},
+	"item": [
+		{
+			"name": "Get Classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/classes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"class_id\": 1,\r\n  \"client_name\": \"sam\",\r\n  \"client_email\": \"shyam@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/book/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/bookings?email=test@hello.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@hello.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
